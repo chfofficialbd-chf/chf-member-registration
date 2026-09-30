@@ -359,6 +359,38 @@
     <button type="button" class="submit-btn">
       Submit Registration
     </button>
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwoEWioiHARlhVql9tQ3svKHiDiaEVosr_Kq9_UDpUxd9z5EovCZJW0PfIxcDxtNu-2/exec";
+
+document.querySelector(".submit-btn").addEventListener("click", async function () {
+
+  const data = {
+    name: document.querySelector('input[name="name"]').value,
+    dob: document.querySelector('input[name="dob"]').value,
+    gender: document.querySelector('input[name="gender"]:checked')?.value || "",
+    bloodGroup: document.querySelector('select[name="bloodGroup"]').value,
+    address: document.querySelector('textarea[name="address"]').value,
+    mobile: document.querySelector('input[name="mobile"]').value,
+    email: document.querySelector('input[name="email"]').value,
+    reference: document.querySelector('input[name="reference"]').value,
+    idFee: document.querySelector('input[name="idFee"]:checked')?.value || "",
+    photo: ""
+  };
+
+  try {
+    await fetch(SCRIPT_URL, {
+      method: "POST",
+      body: JSON.stringify(data)
+    });
+
+    alert("Registration submitted successfully!");
+
+  } catch (error) {
+    alert("Submission failed. Please try again.");
+  }
+});
+</script>
+    
 
     <a href="index.html" class="back-btn">
       ← Back to Home
