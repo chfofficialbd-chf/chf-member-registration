@@ -136,6 +136,64 @@
       transform: translateX(5px);
     }
 
+    /* =====================================
+       FACEBOOK PAGE BUTTON
+    ===================================== */
+
+    .facebook-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      margin-top: 18px;
+
+      min-width: 250px;
+      padding: 13px 24px;
+
+      background: linear-gradient(135deg, #1877f2, #4267b2);
+      color: #ffffff;
+
+      text-decoration: none;
+
+      border-radius: 13px;
+
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 0.3px;
+
+      box-shadow:
+        0 8px 20px rgba(24, 119, 242, 0.22);
+
+      transition: all 0.3s ease;
+    }
+
+    .facebook-btn:hover {
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 13px 28px rgba(24, 119, 242, 0.30);
+    }
+
+    .facebook-icon {
+      width: 25px;
+      height: 25px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #ffffff;
+      color: #1877f2;
+
+      border-radius: 50%;
+
+      font-size: 19px;
+      font-weight: bold;
+
+      line-height: 1;
+    }
+
     .info {
       margin-top: 28px;
       color: #8a94a6;
@@ -189,6 +247,11 @@
         width: 100%;
         min-width: 0;
       }
+
+      .facebook-btn {
+        width: 100%;
+        min-width: 0;
+      }
     }
   </style>
 </head>
@@ -221,10 +284,10 @@
     </h1>
 
     <p class="subtitle">
-  Welcome to the Charity Hope Foundation (CHF) family.
-  <br>
-  Complete your registration to become a member of our community.
-</p>
+      Welcome to the Charity Hope Foundation (CHF) family.
+      <br>
+      Complete your registration to become a member of our community.
+    </p>
 
     <div class="divider"></div>
 
@@ -232,6 +295,20 @@
       <span>Register as a Member</span>
       <span class="arrow">→</span>
     </a>
+
+
+    <!-- FACEBOOK PAGE -->
+
+    <a
+      href="https://www.facebook.com/share/1DaGqHX8oN/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="facebook-btn"
+    >
+      <span class="facebook-icon">f</span>
+      <span>OUR FACEBOOK PAGE</span>
+    </a>
+
 
     <div class="info">
       Please review the rules and guidelines before continuing.
