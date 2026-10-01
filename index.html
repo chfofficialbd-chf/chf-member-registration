@@ -29,18 +29,15 @@
     .main-card {
       width: 100%;
       max-width: 650px;
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.94);
       border-radius: 28px;
       padding: 55px 35px 40px;
       text-align: center;
       box-shadow:
         0 25px 60px rgba(31, 56, 85, 0.14),
         0 5px 15px rgba(31, 56, 85, 0.06);
-      backdrop-filter: blur(12px);
     }
 
-    /* Logo */
     .logo-box {
       width: 125px;
       height: 125px;
@@ -50,8 +47,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow:
-        0 12px 30px rgba(23, 105, 170, 0.18);
+      box-shadow: 0 12px 30px rgba(23, 105, 170, 0.18);
       border: 5px solid #f1f6fb;
     }
 
@@ -63,13 +59,160 @@
       align-items: center;
       justify-content: center;
       color: #1769aa;
-      font-size: 16px;
+      font-size: 20px;
       font-weight: bold;
     }
 
-    /* Foundation Name */
     .small-title {
       color: #1769aa;
       font-size: 14px;
       font-weight: bold;
-      letter-spacing: 2
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 34px;
+      color: #172b4d;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .subtitle {
+      max-width: 480px;
+      margin: 0 auto;
+      color: #667085;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .divider {
+      width: 55px;
+      height: 4px;
+      border-radius: 10px;
+      background: #1769aa;
+      margin: 25px auto 30px;
+    }
+
+    .register-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-width: 250px;
+      padding: 16px 30px;
+      background: linear-gradient(135deg, #1769aa, #0d4f82);
+      color: white;
+      text-decoration: none;
+      border-radius: 13px;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 10px 25px rgba(23, 105, 170, 0.25);
+      transition: all 0.3s ease;
+    }
+
+    .register-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(23, 105, 170, 0.32);
+    }
+
+    .arrow {
+      font-size: 21px;
+      transition: transform 0.3s ease;
+    }
+
+    .register-btn:hover .arrow {
+      transform: translateX(5px);
+    }
+
+    .info {
+      margin-top: 28px;
+      color: #8a94a6;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .footer {
+      margin-top: 35px;
+      padding-top: 20px;
+      border-top: 1px solid #edf0f4;
+      color: #98a2b3;
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 15px;
+      }
+
+      .main-card {
+        padding: 42px 22px 30px;
+        border-radius: 22px;
+      }
+
+      .logo-box {
+        width: 105px;
+        height: 105px;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .subtitle {
+        font-size: 15px;
+      }
+
+      .register-btn {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="main-card">
+
+    <div class="logo-box">
+      <div class="logo-placeholder">
+        CHF
+      </div>
+    </div>
+
+    <div class="small-title">
+      Charity Hope Foundation
+    </div>
+
+    <h1>
+      Member Registration
+    </h1>
+
+    <p class="subtitle">
+      Welcome to the Charity Hope Foundation (CHF) family.
+      Complete your registration to become a member of our community.
+    </p>
+
+    <div class="divider"></div>
+
+    <a href="rules.html" class="register-btn">
+      <span>Register as a Member</span>
+      <span class="arrow">→</span>
+    </a>
+
+    <div class="info">
+      Please review the rules and guidelines before continuing.
+    </div>
+
+    <div class="footer">
+      © 2026 Charity Hope Foundation (CHF)
+      <br>
+      Together for Hope • Humanity • Community
+    </div>
+
+  </div>
+
+</body>
+</html>
