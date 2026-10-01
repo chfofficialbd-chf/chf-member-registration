@@ -47,20 +47,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
       box-shadow: 0 12px 30px rgba(23, 105, 170, 0.18);
       border: 5px solid #f1f6fb;
     }
 
-    .logo-placeholder {
+    .logo-box img {
       width: 100%;
       height: 100%;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #1769aa;
-      font-size: 20px;
-      font-weight: bold;
+      object-fit: contain;
+      display: block;
     }
 
     .small-title {
@@ -177,9 +173,7 @@
   <div class="main-card">
 
     <div class="logo-box">
-      <div class="logo-placeholder">
-        CHF
-      </div>
+      <img src="Logo%20CHF.jpg" alt="Charity Hope Foundation Logo">
     </div>
 
     <div class="small-title">
