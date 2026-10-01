@@ -48,9 +48,8 @@
       }
     }
 
-    /* Header */
     .header {
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255, 255, 255, 0.95);
       border-radius: 18px;
       padding: 18px 20px;
       margin-bottom: 18px;
@@ -73,7 +72,6 @@
       font-weight: 700;
     }
 
-    /* Rules Image */
     .image-card {
       background: white;
       padding: 10px;
@@ -90,7 +88,6 @@
       border-radius: 10px;
     }
 
-    /* Buttons */
     .buttons {
       margin: 22px auto 10px;
       display: flex;
@@ -139,7 +136,6 @@
       box-shadow: 0 5px 15px rgba(31, 56, 85, 0.07);
     }
 
-    /* Step Indicator */
     .step-indicator {
       margin-top: 18px;
       color: #8a94a6;
@@ -150,7 +146,6 @@
       color: #1769aa;
     }
 
-    /* Mobile */
     @media (max-width: 600px) {
       body {
         padding: 10px;
@@ -191,3 +186,126 @@
       .agree-btn {
         grid-column: 1 / -1;
       }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- RULES PAGE 1 -->
+  <div class="page active" id="page1">
+
+    <div class="header">
+      <div class="header-title">
+        Charity Hope Foundation - CHF
+      </div>
+
+      <div class="header-subtitle">
+        Rules & Regulations
+      </div>
+    </div>
+
+    <div class="image-card">
+      <img
+        src="rules-page-1.jpg"
+        alt="CHF Rules and Regulations - Page 1"
+        class="rules-image"
+      >
+    </div>
+
+    <div class="buttons">
+
+      <button class="back-btn" onclick="goHome()">
+        ← Back
+      </button>
+
+      <button class="next-btn" onclick="showPage2()">
+        Next →
+      </button>
+
+    </div>
+
+    <div class="step-indicator">
+      Page <strong>1</strong> of 2
+    </div>
+
+  </div>
+
+
+  <!-- RULES PAGE 2 -->
+  <div class="page" id="page2">
+
+    <div class="header">
+      <div class="header-title">
+        Charity Hope Foundation - CHF
+      </div>
+
+      <div class="header-subtitle">
+        Rules & Regulations
+      </div>
+    </div>
+
+    <div class="image-card">
+      <img
+        src="rules-page-2.jpg"
+        alt="CHF Rules and Regulations - Page 2"
+        class="rules-image"
+      >
+    </div>
+
+    <div class="buttons">
+
+      <button class="back-btn" onclick="showPage1()">
+        ← Previous
+      </button>
+
+      <button class="agree-btn" onclick="continueRegistration()">
+        Agree & Continue →
+      </button>
+
+    </div>
+
+    <div class="step-indicator">
+      Page <strong>2</strong> of 2
+    </div>
+
+  </div>
+
+
+  <script>
+
+    function showPage2() {
+      document.getElementById("page1").classList.remove("active");
+      document.getElementById("page2").classList.add("active");
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
+
+    function showPage1() {
+      document.getElementById("page2").classList.remove("active");
+      document.getElementById("page1").classList.add("active");
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
+
+    function continueRegistration() {
+      window.location.href = "registration.html";
+    }
+
+
+    function goHome() {
+      window.location.href = "index.html";
+    }
+
+  </script>
+
+</body>
+</html>
