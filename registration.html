@@ -7,6 +7,7 @@
   <title>CHF Member Registration</title>
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -14,26 +15,41 @@
       font-family: Arial, sans-serif;
     }
 
+
     body {
+
       min-height: 100vh;
+
       background:
         radial-gradient(circle at top left, #dff3ff 0%, transparent 35%),
         radial-gradient(circle at bottom right, #eee3ff 0%, transparent 35%),
-        linear-gradient(135deg, #f7fbff, #eef3f9);
+        linear-gradient(135deg, #f7fbff, #edf3f9);
 
       padding: 25px 15px;
+
     }
 
+
+    /* =========================
+       MAIN CONTAINER
+    ========================= */
+
     .form-container {
+
       max-width: 700px;
+
       margin: auto;
-      background: #ffffff;
+
+      background: rgba(255,255,255,0.97);
+
       padding: 28px 25px;
-      border-radius: 22px;
+
+      border-radius: 24px;
 
       box-shadow:
-        0 18px 45px rgba(30, 70, 110, 0.14),
-        0 4px 12px rgba(30, 70, 110, 0.06);
+        0 20px 50px rgba(30,70,110,0.14),
+        0 5px 15px rgba(30,70,110,0.06);
+
     }
 
 
@@ -42,12 +58,18 @@
     ========================= */
 
     .header {
+
       text-align: center;
+
       padding: 5px 10px 25px;
+
       margin-bottom: 8px;
+
     }
 
+
     .logo-circle {
+
       width: 82px;
       height: 82px;
 
@@ -55,20 +77,24 @@
 
       border-radius: 50%;
 
-      background: linear-gradient(
-        135deg,
-        #1769aa,
-        #48a9e8,
-        #7b61ff
-      );
+      background:
+        linear-gradient(
+          135deg,
+          #1769aa,
+          #48a9e8,
+          #7b61ff
+        );
 
       padding: 3px;
 
       box-shadow:
-        0 8px 20px rgba(23, 105, 170, 0.25);
+        0 8px 22px rgba(23,105,170,0.25);
+
     }
 
+
     .logo {
+
       width: 100%;
       height: 100%;
 
@@ -77,30 +103,37 @@
       border-radius: 50%;
 
       background: white;
+
       display: block;
+
     }
 
 
     .header h1 {
+
       font-size: 26px;
 
       font-weight: 800;
 
-      background: linear-gradient(
-        90deg,
-        #1769aa,
-        #5145cd,
-        #1769aa
-      );
+      background:
+        linear-gradient(
+          90deg,
+          #1769aa,
+          #5145cd,
+          #1769aa
+        );
 
       -webkit-background-clip: text;
+
       -webkit-text-fill-color: transparent;
 
       margin-bottom: 6px;
+
     }
 
 
     .header p {
+
       color: #5b6675;
 
       font-size: 14px;
@@ -108,10 +141,12 @@
       font-weight: 600;
 
       letter-spacing: 0.5px;
+
     }
 
 
     .header-line {
+
       width: 75px;
       height: 3px;
 
@@ -119,73 +154,130 @@
 
       border-radius: 10px;
 
-      background: linear-gradient(
-        90deg,
-        #1769aa,
-        #7b61ff,
-        #1769aa
-      );
+      background:
+        linear-gradient(
+          90deg,
+          #1769aa,
+          #7b61ff,
+          #1769aa
+        );
+
     }
 
 
     /* =========================
-       SECTION
+       SECTION TITLE
     ========================= */
 
     .section-title {
-      font-size: 19px;
+
+      font-size: 18px;
 
       font-weight: bold;
 
       color: #1769aa;
 
-      margin: 28px 0 18px;
+      margin: 28px 0 17px;
 
-      padding: 10px 12px;
+      padding: 12px 15px;
 
-      border-left: 4px solid #1769aa;
+      border-radius: 10px;
 
-      border-bottom: 1px solid #e4e9ef;
+      border-left: 5px solid #1769aa;
 
-      background: linear-gradient(
-        90deg,
-        #f0f7ff,
-        #ffffff
-      );
+      background:
+        linear-gradient(
+          90deg,
+          #eaf5ff,
+          #f6f2ff
+        );
 
-      border-radius: 0 8px 8px 0;
+      box-shadow:
+        0 3px 10px rgba(23,105,170,0.05);
+
     }
 
+
+    /* =========================
+       FIELD CARD
+    ========================= */
 
     .field {
-      margin-bottom: 18px;
+
+      margin-bottom: 16px;
+
+      padding: 14px;
+
+      border-radius: 13px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f8fbff,
+          #fdfbff
+        );
+
+      border: 1px solid #e5eaf2;
+
+      box-shadow:
+        0 3px 10px rgba(40,70,100,0.04);
+
+      transition: all 0.25s ease;
+
     }
 
 
+    .field:hover {
+
+      border-color: #c8d9ed;
+
+      box-shadow:
+        0 6px 16px rgba(40,70,100,0.08);
+
+    }
+
+
+    /* =========================
+       LABEL
+    ========================= */
+
     label {
+
       display: block;
 
       font-weight: bold;
 
-      color: #333;
+      color: #334155;
 
       margin-bottom: 8px;
+
+      font-size: 14px;
+
     }
 
 
     .required {
+
       color: #e53935;
+
+      font-size: 15px;
+
     }
 
+
+    /* =========================
+       INPUTS
+    ========================= */
 
     input,
     select,
     textarea {
+
       width: 100%;
 
-      padding: 13px;
+      padding: 13px 14px;
 
-      border: 1px solid #ccd5df;
+      border: 1px solid #ccd7e3;
 
       border-radius: 9px;
 
@@ -193,26 +285,53 @@
 
       outline: none;
 
-      background: #fff;
+      background: white;
 
-      transition: all 0.2s ease;
+      color: #263445;
+
+      transition: all 0.25s ease;
+
+    }
+
+
+    input::placeholder,
+    textarea::placeholder {
+
+      color: #9aa6b2;
+
+    }
+
+
+    input:hover,
+    select:hover,
+    textarea:hover {
+
+      border-color: #9bb8d5;
+
     }
 
 
     input:focus,
     select:focus,
     textarea:focus {
+
       border-color: #1769aa;
 
+      background: #ffffff;
+
       box-shadow:
-        0 0 0 3px rgba(23, 105, 170, 0.08);
+        0 0 0 3px rgba(23,105,170,0.10),
+        0 4px 12px rgba(23,105,170,0.06);
+
     }
 
 
     textarea {
+
       min-height: 100px;
 
       resize: vertical;
+
     }
 
 
@@ -221,82 +340,126 @@
     ========================= */
 
     .fee-options {
+
       display: flex;
 
-      gap: 12px;
+      gap: 10px;
 
       flex-wrap: wrap;
+
     }
 
 
     .fee-option {
+
       flex: 1;
 
-      min-width: 130px;
+      min-width: 120px;
+
     }
 
 
     .fee-option input {
+
       display: none;
+
     }
 
 
     .fee-option label {
-      border: 1px solid #ccd5df;
+
+      border: 1px solid #ccd7e3;
 
       border-radius: 9px;
 
-      padding: 13px;
+      padding: 13px 8px;
 
       text-align: center;
 
       cursor: pointer;
 
-      font-weight: normal;
+      font-weight: 600;
 
-      transition: all 0.2s ease;
+      background: white;
+
+      color: #526171;
+
+      transition: all 0.25s ease;
+
+      margin: 0;
+
+    }
+
+
+    .fee-option label:hover {
+
+      border-color: #7da9d0;
+
+      background: #f3f9ff;
+
     }
 
 
     .fee-option input:checked + label {
-      background: linear-gradient(
-        135deg,
-        #1769aa,
-        #5145cd
-      );
+
+      background:
+        linear-gradient(
+          135deg,
+          #1769aa,
+          #5145cd
+        );
 
       color: white;
 
-      border-color: #1769aa;
+      border-color: transparent;
 
       box-shadow:
-        0 5px 15px rgba(23, 105, 170, 0.18);
+        0 6px 15px rgba(23,105,170,0.20);
+
     }
 
 
     /* =========================
-       PHOTO
+       PHOTO BOX
     ========================= */
 
     .photo-box {
-      border: 2px dashed #b8c5d3;
 
-      border-radius: 12px;
+      border: 2px dashed #9bb8d5;
 
-      padding: 25px;
+      border-radius: 14px;
+
+      padding: 23px 18px;
 
       text-align: center;
 
-      background: #f9fbfe;
+      background:
+        linear-gradient(
+          135deg,
+          #f3faff,
+          #faf7ff
+        );
+
+    }
+
+
+    .photo-box label {
+
+      color: #1769aa;
+
     }
 
 
     .photo-box input {
+
       border: none;
 
       padding: 5px;
 
       background: transparent;
+
+      box-shadow: none;
+
     }
 
 
@@ -305,19 +468,21 @@
     ========================= */
 
     .submit-btn {
+
       width: 100%;
 
-      padding: 15px;
+      padding: 16px;
 
       border: none;
 
-      border-radius: 11px;
+      border-radius: 12px;
 
-      background: linear-gradient(
-        135deg,
-        #1769aa,
-        #5145cd
-      );
+      background:
+        linear-gradient(
+          135deg,
+          #1769aa,
+          #5145cd
+        );
 
       color: white;
 
@@ -327,25 +492,30 @@
 
       cursor: pointer;
 
-      margin-top: 15px;
+      margin-top: 17px;
 
       box-shadow:
-        0 9px 22px rgba(23, 105, 170, 0.22);
+        0 10px 25px rgba(23,105,170,0.23);
 
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
+
     }
 
 
     .submit-btn:hover {
+
       transform: translateY(-2px);
 
       box-shadow:
-        0 12px 25px rgba(23, 105, 170, 0.28);
+        0 14px 30px rgba(23,105,170,0.28);
+
     }
 
 
     .submit-btn:active {
+
       transform: translateY(0);
+
     }
 
 
@@ -354,24 +524,28 @@
     ========================= */
 
     .back-btn {
+
       display: block;
 
       text-align: center;
 
       margin-top: 18px;
 
-      color: #555f6d;
+      color: #64748b;
 
       text-decoration: none;
 
       font-size: 14px;
+
     }
 
 
     .back-btn:hover {
+
       color: #1769aa;
 
       text-decoration: underline;
+
     }
 
 
@@ -382,46 +556,70 @@
     @media (max-width: 600px) {
 
       body {
+
         padding: 10px;
+
       }
 
 
       .form-container {
-        padding: 22px 16px;
 
-        border-radius: 17px;
+        padding: 22px 14px;
+
+        border-radius: 18px;
+
       }
 
 
       .logo-circle {
+
         width: 70px;
         height: 70px;
+
       }
 
 
       .header h1 {
+
         font-size: 23px;
+
       }
 
 
       .header p {
+
         font-size: 13px;
+
       }
 
 
       .section-title {
+
         font-size: 17px;
+
+      }
+
+
+      .field {
+
+        padding: 12px;
+
       }
 
 
       .fee-options {
+
         flex-direction: column;
+
       }
 
 
       .fee-option {
+
         width: 100%;
+
       }
+
     }
 
   </style>
@@ -430,12 +628,14 @@
 
 <body>
 
+
   <div class="form-container">
 
 
     <!-- HEADER -->
 
     <div class="header">
+
 
       <div class="logo-circle">
 
@@ -459,6 +659,7 @@
 
 
       <div class="header-line"></div>
+
 
     </div>
 
@@ -836,6 +1037,7 @@
 
 
   </div>
+
 
 </body>
 </html>
