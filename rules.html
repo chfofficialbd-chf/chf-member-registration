@@ -16,21 +16,80 @@
       padding: 20px;
       background: #f3f5f7;
       font-family: Arial, sans-serif;
+      overflow-x: hidden;
     }
 
+    /* PAGE CONTAINER */
+    .pages-container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* EACH PAGE */
     .page {
-      display: none;
       width: 100%;
       text-align: center;
+      display: none;
     }
 
     .page.active {
       display: block;
+      animation: slideInRight 0.45s ease;
     }
 
+    .page.slide-left {
+      animation: slideOutLeft 0.45s ease;
+    }
+
+    .page.slide-from-left {
+      animation: slideInLeft 0.45s ease;
+    }
+
+    /* NEXT ANIMATION */
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideOutLeft {
+      from {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      to {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+    }
+
+    /* PREVIOUS ANIMATION */
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* RULES IMAGE */
     .rules-image {
       width: 100%;
-      max-width: 1100px;
+      max-width: 900px;
       height: auto;
       display: block;
       margin: 0 auto;
@@ -39,8 +98,9 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     }
 
+    /* BUTTONS */
     .buttons {
-      max-width: 1100px;
+      max-width: 900px;
       margin: 20px auto;
       display: flex;
       justify-content: center;
@@ -55,6 +115,16 @@
       font-size: 17px;
       font-weight: bold;
       cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+
+    button:active {
+      transform: translateY(0);
     }
 
     .next-btn {
@@ -72,23 +142,31 @@
       color: white;
     }
 
-    button:hover {
-      opacity: 0.9;
-    }
-
+    /* MOBILE */
     @media (max-width: 600px) {
 
       body {
         padding: 8px;
       }
 
+      .pages-container {
+        max-width: 100%;
+      }
+
+      .rules-image {
+        max-width: 100%;
+        border-radius: 7px;
+      }
+
       .buttons {
         margin-top: 12px;
+        gap: 10px;
       }
 
       button {
         width: 100%;
         padding: 13px 15px;
+        font-size: 16px;
       }
 
     }
@@ -97,50 +175,54 @@
 
 <body>
 
-  <!-- RULES PAGE 1 -->
+  <div class="pages-container">
 
-  <div class="page active" id="page1">
+    <!-- PAGE 1 -->
 
-    <img
-      src="rules-page-1.jpg"
-      alt="CHF Rules and Regulations - Page 1"
-      class="rules-image"
-    >
+    <div class="page active" id="page1">
 
-    <div class="buttons">
+      <img
+        src="rules-page-1.jpg"
+        alt="CHF Rules and Regulations - Page 1"
+        class="rules-image"
+      >
 
-      <button class="back-btn" onclick="goHome()">
-        Back to Home
-      </button>
+      <div class="buttons">
 
-      <button class="next-btn" onclick="showPage2()">
-        Next
-      </button>
+        <button class="back-btn" onclick="goHome()">
+          ← Back
+        </button>
+
+        <button class="next-btn" onclick="showPage2()">
+          Next →
+        </button>
+
+      </div>
 
     </div>
 
-  </div>
 
+    <!-- PAGE 2 -->
 
-  <!-- RULES PAGE 2 -->
+    <div class="page" id="page2">
 
-  <div class="page" id="page2">
+      <img
+        src="rules-page-2.jpg"
+        alt="CHF Rules and Regulations - Page 2"
+        class="rules-image"
+      >
 
-    <img
-      src="rules-page-2.jpg"
-      alt="CHF Rules and Regulations - Page 2"
-      class="rules-image"
-    >
+      <div class="buttons">
 
-    <div class="buttons">
+        <button class="back-btn" onclick="showPage1()">
+          ← Previous
+        </button>
 
-      <button class="back-btn" onclick="showPage1()">
-        Previous
-      </button>
+        <button class="agree-btn" onclick="continueRegistration()">
+          Agree & Continue →
+        </button>
 
-      <button class="agree-btn" onclick="continueRegistration()">
-        Agree & Continue
-      </button>
+      </div>
 
     </div>
 
@@ -151,22 +233,52 @@
 
     function showPage2() {
 
-      document.getElementById("page1").classList.remove("active");
+      const page1 = document.getElementById("page1");
+      const page2 = document.getElementById("page2");
 
-      document.getElementById("page2").classList.add("active");
+      page1.classList.remove("active");
+      page1.classList.add("slide-left");
 
-      window.scrollTo(0, 0);
+      setTimeout(function() {
+
+        page1.style.display = "none";
+        page1.classList.remove("slide-left");
+
+        page2.style.display = "block";
+        page2.classList.add("active");
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      }, 400);
 
     }
 
 
     function showPage1() {
 
-      document.getElementById("page2").classList.remove("active");
+      const page1 = document.getElementById("page1");
+      const page2 = document.getElementById("page2");
 
-      document.getElementById("page1").classList.add("active");
+      page2.classList.remove("active");
+      page2.classList.add("slide-left");
 
-      window.scrollTo(0, 0);
+      setTimeout(function() {
+
+        page2.style.display = "none";
+        page2.classList.remove("slide-left");
+
+        page1.style.display = "block";
+        page1.classList.add("slide-from-left");
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      }, 400);
 
     }
 
