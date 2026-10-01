@@ -16,42 +16,72 @@
 
     body {
       min-height: 100vh;
-      background: linear-gradient(135deg, #f5f7fa, #e8eef5);
-      padding: 30px 15px;
+      background:
+        radial-gradient(circle at top left, #dceeff 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #e7ddff 0%, transparent 35%),
+        linear-gradient(135deg, #f5f8fc, #e9eef5);
+      padding: 25px 15px;
     }
 
     .form-container {
       max-width: 700px;
       margin: auto;
       background: #ffffff;
-      padding: 35px 25px;
-      border-radius: 20px;
-      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+      padding: 30px 25px;
+      border-radius: 22px;
+      box-shadow:
+        0 15px 40px rgba(31, 56, 85, 0.12),
+        0 3px 10px rgba(31, 56, 85, 0.06);
     }
+
+    /* HEADER */
 
     .header {
       text-align: center;
-      margin-bottom: 30px;
+      padding: 10px 10px 25px;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      width: 105px;
+      height: 105px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 15px;
+      border-radius: 50%;
     }
 
     .header h1 {
-      font-size: 28px;
-      color: #222;
+      font-size: 29px;
+      color: #172b4d;
       margin-bottom: 8px;
+      font-weight: 700;
     }
 
     .header p {
-      color: #666;
-      font-size: 15px;
+      color: #1769aa;
+      font-size: 17px;
+      font-weight: bold;
+      letter-spacing: 0.3px;
     }
+
+    .header-line {
+      width: 70px;
+      height: 3px;
+      background: #1769aa;
+      border-radius: 5px;
+      margin: 15px auto 0;
+    }
+
+    /* SECTION */
 
     .section-title {
       font-size: 19px;
       font-weight: bold;
       color: #1769aa;
       margin: 28px 0 18px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #e5e5e5;
+      padding-bottom: 9px;
+      border-bottom: 2px solid #e5eaf0;
     }
 
     .field {
@@ -74,23 +104,27 @@
     textarea {
       width: 100%;
       padding: 13px;
-      border: 1px solid #ccc;
+      border: 1px solid #ccd3dc;
       border-radius: 9px;
       font-size: 15px;
       outline: none;
       background: #fff;
+      transition: 0.2s ease;
     }
 
     input:focus,
     select:focus,
     textarea:focus {
       border-color: #1769aa;
+      box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.08);
     }
 
     textarea {
       min-height: 100px;
       resize: vertical;
     }
+
+    /* FEE */
 
     .fee-options {
       display: flex;
@@ -108,12 +142,13 @@
     }
 
     .fee-option label {
-      border: 1px solid #ccc;
+      border: 1px solid #ccd3dc;
       border-radius: 9px;
       padding: 13px;
       text-align: center;
       cursor: pointer;
       font-weight: normal;
+      transition: 0.2s ease;
     }
 
     .fee-option input:checked + label {
@@ -122,45 +157,96 @@
       border-color: #1769aa;
     }
 
+    /* PHOTO */
+
     .photo-box {
-      border: 2px dashed #bbb;
+      border: 2px dashed #b8c1cc;
       border-radius: 12px;
       padding: 25px;
       text-align: center;
+      background: #fafcff;
     }
 
     .photo-box input {
       border: none;
       padding: 5px;
+      background: transparent;
     }
+
+    /* SUBMIT */
 
     .submit-btn {
       width: 100%;
       padding: 15px;
       border: none;
       border-radius: 10px;
-      background: #1769aa;
+      background: linear-gradient(135deg, #1769aa, #0d4f82);
       color: white;
       font-size: 18px;
       font-weight: bold;
       cursor: pointer;
       margin-top: 15px;
+      box-shadow: 0 8px 20px rgba(23, 105, 170, 0.20);
+      transition: 0.2s ease;
     }
 
     .submit-btn:hover {
-      background: #0d4f82;
+      transform: translateY(-2px);
+    }
+
+    .submit-btn:active {
+      transform: translateY(0);
     }
 
     .back-btn {
       display: block;
       text-align: center;
-      margin-top: 15px;
+      margin-top: 18px;
       color: #555;
       text-decoration: none;
     }
 
     .back-btn:hover {
       text-decoration: underline;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      body {
+        padding: 10px;
+      }
+
+      .form-container {
+        padding: 22px 16px;
+        border-radius: 16px;
+      }
+
+      .logo {
+        width: 90px;
+        height: 90px;
+      }
+
+      .header h1 {
+        font-size: 24px;
+      }
+
+      .header p {
+        font-size: 15px;
+      }
+
+      .section-title {
+        font-size: 18px;
+      }
+
+      .fee-options {
+        flex-direction: column;
+      }
+
+      .fee-option {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -169,12 +255,27 @@
 
   <div class="form-container">
 
+    <!-- HEADER -->
+
     <div class="header">
+
+      <img
+        src="https://raw.githubusercontent.com/chfofficialbd-chf/chf-member-registration/main/Logo%20CHF.jpg"
+        alt="Charity Hope Foundation - CHF Logo"
+        class="logo"
+      >
+
       <h1>CHF Member Registration</h1>
-      <p>Charity Hope Foundation</p>
+
+      <p>Charity Hope Foundation-CHF</p>
+
+      <div class="header-line"></div>
+
     </div>
 
+
     <!-- Personal Information -->
+
     <div class="section-title">
       Personal Information
     </div>
@@ -244,7 +345,9 @@
         required></textarea>
     </div>
 
+
     <!-- Contact Information -->
+
     <div class="section-title">
       Contact Information
     </div>
@@ -273,7 +376,9 @@
         required>
     </div>
 
+
     <!-- Membership Information -->
+
     <div class="section-title">
       Membership Information
     </div>
@@ -297,6 +402,7 @@
       <div class="fee-options">
 
         <div class="fee-option">
+
           <input
             type="radio"
             id="feeYes"
@@ -307,9 +413,11 @@
           <label for="feeYes">
             Yes
           </label>
+
         </div>
 
         <div class="fee-option">
+
           <input
             type="radio"
             id="feeNo"
@@ -319,9 +427,11 @@
           <label for="feeNo">
             No
           </label>
+
         </div>
 
         <div class="fee-option">
+
           <input
             type="radio"
             id="feeWillPay"
@@ -331,12 +441,15 @@
           <label for="feeWillPay">
             Will be paid
           </label>
+
         </div>
 
       </div>
     </div>
 
+
     <!-- Photo -->
+
     <div class="section-title">
       Passport Size Picture
     </div>
@@ -356,41 +469,72 @@
 
     </div>
 
+
+    <!-- SUBMIT -->
+
     <button type="button" class="submit-btn">
       Submit Registration
     </button>
-<script>
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwoEWioiHARlhVql9tQ3svKHiDiaEVosr_Kq9_UDpUxd9z5EovCZJW0PfIxcDxtNu-2/exec";
 
-document.querySelector(".submit-btn").addEventListener("click", async function () {
 
-  const data = {
-    name: document.querySelector('input[name="name"]').value,
-    dob: document.querySelector('input[name="dob"]').value,
-    gender: document.querySelector('input[name="gender"]:checked')?.value || "",
-    bloodGroup: document.querySelector('select[name="bloodGroup"]').value,
-    address: document.querySelector('textarea[name="address"]').value,
-    mobile: document.querySelector('input[name="mobile"]').value,
-    email: document.querySelector('input[name="email"]').value,
-    reference: document.querySelector('input[name="reference"]').value,
-    idFee: document.querySelector('input[name="idFee"]:checked')?.value || "",
-    photo: ""
-  };
+    <script>
 
-  try {
-    await fetch(SCRIPT_URL, {
-      method: "POST",
-      body: JSON.stringify(data)
-    });
+      const SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycbwoEWioiHARlhVql9tQ3svKHiDiaEVosr_Kq9_UDpUxd9z5EovCZJW0PfIxcDxtNu-2/exec";
 
-    alert("Registration submitted successfully!");
+      document.querySelector(".submit-btn").addEventListener("click", async function () {
 
-  } catch (error) {
-    alert("Submission failed. Please try again.");
-  }
-});
-</script>
-    
+        const data = {
+
+          name: document.querySelector('input[name="name"]').value,
+
+          dob: document.querySelector('input[name="dob"]').value,
+
+          gender:
+            document.querySelector('select[name="gender"]').value,
+
+          bloodGroup:
+            document.querySelector('select[name="bloodGroup"]').value,
+
+          address:
+            document.querySelector('textarea[name="address"]').value,
+
+          mobile:
+            document.querySelector('input[name="mobile"]').value,
+
+          email:
+            document.querySelector('input[name="email"]').value,
+
+          reference:
+            document.querySelector('input[name="reference"]').value,
+
+          idFee:
+            document.querySelector('input[name="idFee"]:checked')?.value || "",
+
+          photo: ""
+
+        };
+
+
+        try {
+
+          await fetch(SCRIPT_URL, {
+            method: "POST",
+            body: JSON.stringify(data)
+          });
+
+          alert("Registration submitted successfully!");
+
+        } catch (error) {
+
+          alert("Submission failed. Please try again.");
+
+        }
+
+      });
+
+    </script>
+
 
     <a href="index.html" class="back-btn">
       ← Back to Home
