@@ -17,9 +17,10 @@
     body {
       min-height: 100vh;
       background:
-        radial-gradient(circle at top left, #dceeff 0%, transparent 35%),
-        radial-gradient(circle at bottom right, #e7ddff 0%, transparent 35%),
-        linear-gradient(135deg, #f5f8fc, #e9eef5);
+        radial-gradient(circle at top left, #dff3ff 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #eee3ff 0%, transparent 35%),
+        linear-gradient(135deg, #f7fbff, #eef3f9);
+
       padding: 25px 15px;
     }
 
@@ -27,190 +28,356 @@
       max-width: 700px;
       margin: auto;
       background: #ffffff;
-      padding: 30px 25px;
+      padding: 28px 25px;
       border-radius: 22px;
+
       box-shadow:
-        0 15px 40px rgba(31, 56, 85, 0.12),
-        0 3px 10px rgba(31, 56, 85, 0.06);
+        0 18px 45px rgba(30, 70, 110, 0.14),
+        0 4px 12px rgba(30, 70, 110, 0.06);
     }
 
-    /* HEADER */
+
+    /* =========================
+       HEADER
+    ========================= */
 
     .header {
       text-align: center;
-      padding: 10px 10px 25px;
-      margin-bottom: 10px;
+      padding: 5px 10px 25px;
+      margin-bottom: 8px;
+    }
+
+    .logo-circle {
+      width: 82px;
+      height: 82px;
+
+      margin: 0 auto 13px;
+
+      border-radius: 50%;
+
+      background: linear-gradient(
+        135deg,
+        #1769aa,
+        #48a9e8,
+        #7b61ff
+      );
+
+      padding: 3px;
+
+      box-shadow:
+        0 8px 20px rgba(23, 105, 170, 0.25);
     }
 
     .logo {
-      width: 105px;
-      height: 105px;
+      width: 100%;
+      height: 100%;
+
       object-fit: contain;
-      display: block;
-      margin: 0 auto 15px;
+
       border-radius: 50%;
+
+      background: white;
+      display: block;
     }
+
 
     .header h1 {
-      font-size: 29px;
-      color: #172b4d;
-      margin-bottom: 8px;
-      font-weight: 700;
+      font-size: 26px;
+
+      font-weight: 800;
+
+      background: linear-gradient(
+        90deg,
+        #1769aa,
+        #5145cd,
+        #1769aa
+      );
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      margin-bottom: 6px;
     }
+
 
     .header p {
-      color: #1769aa;
-      font-size: 17px;
-      font-weight: bold;
-      letter-spacing: 0.3px;
+      color: #5b6675;
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      letter-spacing: 0.5px;
     }
+
 
     .header-line {
-      width: 70px;
+      width: 75px;
       height: 3px;
-      background: #1769aa;
-      border-radius: 5px;
-      margin: 15px auto 0;
+
+      margin: 13px auto 0;
+
+      border-radius: 10px;
+
+      background: linear-gradient(
+        90deg,
+        #1769aa,
+        #7b61ff,
+        #1769aa
+      );
     }
 
-    /* SECTION */
+
+    /* =========================
+       SECTION
+    ========================= */
 
     .section-title {
       font-size: 19px;
+
       font-weight: bold;
+
       color: #1769aa;
+
       margin: 28px 0 18px;
-      padding-bottom: 9px;
-      border-bottom: 2px solid #e5eaf0;
+
+      padding: 10px 12px;
+
+      border-left: 4px solid #1769aa;
+
+      border-bottom: 1px solid #e4e9ef;
+
+      background: linear-gradient(
+        90deg,
+        #f0f7ff,
+        #ffffff
+      );
+
+      border-radius: 0 8px 8px 0;
     }
+
 
     .field {
       margin-bottom: 18px;
     }
 
+
     label {
       display: block;
+
       font-weight: bold;
+
       color: #333;
+
       margin-bottom: 8px;
     }
 
+
     .required {
-      color: red;
+      color: #e53935;
     }
+
 
     input,
     select,
     textarea {
       width: 100%;
+
       padding: 13px;
-      border: 1px solid #ccd3dc;
+
+      border: 1px solid #ccd5df;
+
       border-radius: 9px;
+
       font-size: 15px;
+
       outline: none;
+
       background: #fff;
-      transition: 0.2s ease;
+
+      transition: all 0.2s ease;
     }
+
 
     input:focus,
     select:focus,
     textarea:focus {
       border-color: #1769aa;
-      box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.08);
+
+      box-shadow:
+        0 0 0 3px rgba(23, 105, 170, 0.08);
     }
+
 
     textarea {
       min-height: 100px;
+
       resize: vertical;
     }
 
-    /* FEE */
+
+    /* =========================
+       FEE OPTIONS
+    ========================= */
 
     .fee-options {
       display: flex;
+
       gap: 12px;
+
       flex-wrap: wrap;
     }
 
+
     .fee-option {
       flex: 1;
+
       min-width: 130px;
     }
+
 
     .fee-option input {
       display: none;
     }
 
+
     .fee-option label {
-      border: 1px solid #ccd3dc;
+      border: 1px solid #ccd5df;
+
       border-radius: 9px;
+
       padding: 13px;
+
       text-align: center;
+
       cursor: pointer;
+
       font-weight: normal;
-      transition: 0.2s ease;
+
+      transition: all 0.2s ease;
     }
+
 
     .fee-option input:checked + label {
-      background: #1769aa;
+      background: linear-gradient(
+        135deg,
+        #1769aa,
+        #5145cd
+      );
+
       color: white;
+
       border-color: #1769aa;
+
+      box-shadow:
+        0 5px 15px rgba(23, 105, 170, 0.18);
     }
 
-    /* PHOTO */
+
+    /* =========================
+       PHOTO
+    ========================= */
 
     .photo-box {
-      border: 2px dashed #b8c1cc;
+      border: 2px dashed #b8c5d3;
+
       border-radius: 12px;
+
       padding: 25px;
+
       text-align: center;
-      background: #fafcff;
+
+      background: #f9fbfe;
     }
+
 
     .photo-box input {
       border: none;
+
       padding: 5px;
+
       background: transparent;
     }
 
-    /* SUBMIT */
+
+    /* =========================
+       SUBMIT BUTTON
+    ========================= */
 
     .submit-btn {
       width: 100%;
+
       padding: 15px;
+
       border: none;
-      border-radius: 10px;
-      background: linear-gradient(135deg, #1769aa, #0d4f82);
+
+      border-radius: 11px;
+
+      background: linear-gradient(
+        135deg,
+        #1769aa,
+        #5145cd
+      );
+
       color: white;
+
       font-size: 18px;
+
       font-weight: bold;
+
       cursor: pointer;
+
       margin-top: 15px;
-      box-shadow: 0 8px 20px rgba(23, 105, 170, 0.20);
-      transition: 0.2s ease;
+
+      box-shadow:
+        0 9px 22px rgba(23, 105, 170, 0.22);
+
+      transition: all 0.2s ease;
     }
+
 
     .submit-btn:hover {
       transform: translateY(-2px);
+
+      box-shadow:
+        0 12px 25px rgba(23, 105, 170, 0.28);
     }
+
 
     .submit-btn:active {
       transform: translateY(0);
     }
 
+
+    /* =========================
+       BACK BUTTON
+    ========================= */
+
     .back-btn {
       display: block;
+
       text-align: center;
+
       margin-top: 18px;
-      color: #555;
+
+      color: #555f6d;
+
       text-decoration: none;
+
+      font-size: 14px;
     }
 
+
     .back-btn:hover {
+      color: #1769aa;
+
       text-decoration: underline;
     }
 
-    /* MOBILE */
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 600px) {
 
@@ -218,69 +385,93 @@
         padding: 10px;
       }
 
+
       .form-container {
         padding: 22px 16px;
-        border-radius: 16px;
+
+        border-radius: 17px;
       }
 
-      .logo {
-        width: 90px;
-        height: 90px;
+
+      .logo-circle {
+        width: 70px;
+        height: 70px;
       }
+
 
       .header h1 {
-        font-size: 24px;
+        font-size: 23px;
       }
+
 
       .header p {
-        font-size: 15px;
+        font-size: 13px;
       }
 
+
       .section-title {
-        font-size: 18px;
+        font-size: 17px;
       }
+
 
       .fee-options {
         flex-direction: column;
       }
 
+
       .fee-option {
         width: 100%;
       }
     }
+
   </style>
 </head>
+
 
 <body>
 
   <div class="form-container">
 
+
     <!-- HEADER -->
 
     <div class="header">
 
-      <img
-        src="https://raw.githubusercontent.com/chfofficialbd-chf/chf-member-registration/main/Logo%20CHF.jpg"
-        alt="Charity Hope Foundation - CHF Logo"
-        class="logo"
-      >
+      <div class="logo-circle">
 
-      <h1>CHF Member Registration</h1>
+        <img
+          src="https://raw.githubusercontent.com/chfofficialbd-chf/chf-member-registration/main/Logo%20CHF.jpg"
+          alt="CHF Logo"
+          class="logo"
+        >
 
-      <p>Charity Hope Foundation-CHF</p>
+      </div>
+
+
+      <h1>
+        CHF Member Registration
+      </h1>
+
+
+      <p>
+        Charity Hope Foundation-CHF
+      </p>
+
 
       <div class="header-line"></div>
 
     </div>
 
 
-    <!-- Personal Information -->
+    <!-- PERSONAL INFORMATION -->
 
     <div class="section-title">
       Personal Information
     </div>
 
+
     <div class="field">
+
       <label>
         Name <span class="required">*</span>
       </label>
@@ -290,9 +481,12 @@
         name="name"
         placeholder="Enter your full name"
         required>
+
     </div>
 
+
     <div class="field">
+
       <label>
         Date of Birth <span class="required">*</span>
       </label>
@@ -301,28 +495,51 @@
         type="date"
         name="dob"
         required>
+
     </div>
 
+
     <div class="field">
+
       <label>
         Gender <span class="required">*</span>
       </label>
 
       <select name="gender" required>
-        <option value="">Select Gender</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Other">Other</option>
+
+        <option value="">
+          Select Gender
+        </option>
+
+        <option value="Male">
+          Male
+        </option>
+
+        <option value="Female">
+          Female
+        </option>
+
+        <option value="Other">
+          Other
+        </option>
+
       </select>
+
     </div>
 
+
     <div class="field">
+
       <label>
         Blood Group
       </label>
 
       <select name="bloodGroup">
-        <option value="">Select Blood Group</option>
+
+        <option value="">
+          Select Blood Group
+        </option>
+
         <option value="A+">A+</option>
         <option value="A-">A-</option>
         <option value="B+">B+</option>
@@ -331,10 +548,14 @@
         <option value="AB-">AB-</option>
         <option value="O+">O+</option>
         <option value="O-">O-</option>
+
       </select>
+
     </div>
 
+
     <div class="field">
+
       <label>
         Address <span class="required">*</span>
       </label>
@@ -343,16 +564,19 @@
         name="address"
         placeholder="Enter your full address"
         required></textarea>
+
     </div>
 
 
-    <!-- Contact Information -->
+    <!-- CONTACT INFORMATION -->
 
     <div class="section-title">
       Contact Information
     </div>
 
+
     <div class="field">
+
       <label>
         Mobile Number <span class="required">*</span>
       </label>
@@ -362,9 +586,12 @@
         name="mobile"
         placeholder="Enter your mobile number"
         required>
+
     </div>
 
+
     <div class="field">
+
       <label>
         Email Address <span class="required">*</span>
       </label>
@@ -374,16 +601,19 @@
         name="email"
         placeholder="Enter your email address"
         required>
+
     </div>
 
 
-    <!-- Membership Information -->
+    <!-- MEMBERSHIP INFORMATION -->
 
     <div class="section-title">
       Membership Information
     </div>
 
+
     <div class="field">
+
       <label>
         Reference
       </label>
@@ -392,14 +622,19 @@
         type="text"
         name="reference"
         placeholder="Reference person's name">
+
     </div>
 
+
     <div class="field">
+
       <label>
         ID Card Fee <span class="required">*</span>
       </label>
 
+
       <div class="fee-options">
+
 
         <div class="fee-option">
 
@@ -416,6 +651,7 @@
 
         </div>
 
+
         <div class="fee-option">
 
           <input
@@ -429,6 +665,7 @@
           </label>
 
         </div>
+
 
         <div class="fee-option">
 
@@ -444,22 +681,29 @@
 
         </div>
 
+
       </div>
+
     </div>
 
 
-    <!-- Photo -->
+    <!-- PHOTO -->
 
     <div class="section-title">
       Passport Size Picture
     </div>
 
+
     <div class="field photo-box">
 
       <label>
+
         Upload Passport Size Picture
+
         <span class="required">*</span>
+
       </label>
+
 
       <input
         type="file"
@@ -472,8 +716,12 @@
 
     <!-- SUBMIT -->
 
-    <button type="button" class="submit-btn">
+    <button
+      type="button"
+      class="submit-btn">
+
       Submit Registration
+
     </button>
 
 
@@ -482,63 +730,110 @@
       const SCRIPT_URL =
         "https://script.google.com/macros/s/AKfycbwoEWioiHARlhVql9tQ3svKHiDiaEVosr_Kq9_UDpUxd9z5EovCZJW0PfIxcDxtNu-2/exec";
 
-      document.querySelector(".submit-btn").addEventListener("click", async function () {
 
-        const data = {
-
-          name: document.querySelector('input[name="name"]').value,
-
-          dob: document.querySelector('input[name="dob"]').value,
-
-          gender:
-            document.querySelector('select[name="gender"]').value,
-
-          bloodGroup:
-            document.querySelector('select[name="bloodGroup"]').value,
-
-          address:
-            document.querySelector('textarea[name="address"]').value,
-
-          mobile:
-            document.querySelector('input[name="mobile"]').value,
-
-          email:
-            document.querySelector('input[name="email"]').value,
-
-          reference:
-            document.querySelector('input[name="reference"]').value,
-
-          idFee:
-            document.querySelector('input[name="idFee"]:checked')?.value || "",
-
-          photo: ""
-
-        };
+      document
+        .querySelector(".submit-btn")
+        .addEventListener("click", async function () {
 
 
-        try {
+          const data = {
 
-          await fetch(SCRIPT_URL, {
-            method: "POST",
-            body: JSON.stringify(data)
-          });
+            name:
+              document.querySelector(
+                'input[name="name"]'
+              ).value,
 
-          alert("Registration submitted successfully!");
 
-        } catch (error) {
+            dob:
+              document.querySelector(
+                'input[name="dob"]'
+              ).value,
 
-          alert("Submission failed. Please try again.");
 
-        }
+            gender:
+              document.querySelector(
+                'select[name="gender"]'
+              ).value,
 
-      });
+
+            bloodGroup:
+              document.querySelector(
+                'select[name="bloodGroup"]'
+              ).value,
+
+
+            address:
+              document.querySelector(
+                'textarea[name="address"]'
+              ).value,
+
+
+            mobile:
+              document.querySelector(
+                'input[name="mobile"]'
+              ).value,
+
+
+            email:
+              document.querySelector(
+                'input[name="email"]'
+              ).value,
+
+
+            reference:
+              document.querySelector(
+                'input[name="reference"]'
+              ).value,
+
+
+            idFee:
+              document.querySelector(
+                'input[name="idFee"]:checked'
+              )?.value || "",
+
+
+            photo: ""
+
+          };
+
+
+          try {
+
+            await fetch(
+              SCRIPT_URL,
+              {
+                method: "POST",
+                body: JSON.stringify(data)
+              }
+            );
+
+
+            alert(
+              "Registration submitted successfully!"
+            );
+
+
+          } catch (error) {
+
+            alert(
+              "Submission failed. Please try again."
+            );
+
+          }
+
+        });
 
     </script>
 
 
-    <a href="index.html" class="back-btn">
+    <a
+      href="index.html"
+      class="back-btn">
+
       ← Back to Home
+
     </a>
+
 
   </div>
 
