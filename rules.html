@@ -8,184 +8,89 @@
 
   <style>
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
-      min-height: 100vh;
-      background:
-        radial-gradient(circle at top left, #dceeff 0%, transparent 35%),
-        radial-gradient(circle at bottom right, #e7ddff 0%, transparent 35%),
-        linear-gradient(135deg, #f7faff, #eef3f9);
-      padding: 25px;
+      margin: 0;
+      padding: 20px;
+      background: #f3f5f7;
+      font-family: Arial, sans-serif;
     }
 
     .page {
       display: none;
       width: 100%;
-      max-width: 1150px;
-      margin: 0 auto;
       text-align: center;
     }
 
     .page.active {
       display: block;
-      animation: fadeIn 0.35s ease;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(8px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .header {
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 18px;
-      padding: 18px 20px;
-      margin-bottom: 18px;
-      box-shadow: 0 8px 25px rgba(31, 56, 85, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.8);
-    }
-
-    .header-title {
-      color: #1769aa;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 5px;
-    }
-
-    .header-subtitle {
-      color: #172b4d;
-      font-size: 24px;
-      font-weight: 700;
-    }
-
-    .image-card {
-      background: white;
-      padding: 10px;
-      border-radius: 18px;
-      box-shadow:
-        0 15px 40px rgba(31, 56, 85, 0.12),
-        0 3px 10px rgba(31, 56, 85, 0.06);
     }
 
     .rules-image {
       width: 100%;
+      max-width: 1100px;
       height: auto;
       display: block;
+      margin: 0 auto;
+      background: white;
       border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     }
 
     .buttons {
-      margin: 22px auto 10px;
+      max-width: 1100px;
+      margin: 20px auto;
       display: flex;
       justify-content: center;
-      align-items: center;
       gap: 12px;
       flex-wrap: wrap;
     }
 
     button {
       border: none;
-      border-radius: 12px;
-      padding: 14px 28px;
-      font-size: 16px;
+      border-radius: 8px;
+      padding: 13px 28px;
+      font-size: 17px;
       font-weight: bold;
       cursor: pointer;
-      transition: all 0.25s ease;
-      min-width: 145px;
-    }
-
-    button:hover {
-      transform: translateY(-2px);
-    }
-
-    button:active {
-      transform: translateY(0);
     }
 
     .next-btn {
-      background: linear-gradient(135deg, #1769aa, #0d4f82);
+      background: #1976d2;
       color: white;
-      box-shadow: 0 8px 20px rgba(23, 105, 170, 0.22);
     }
 
     .agree-btn {
-      background: linear-gradient(135deg, #2e8b57, #206b41);
+      background: #2e7d32;
       color: white;
-      box-shadow: 0 8px 20px rgba(46, 139, 87, 0.22);
-      min-width: 220px;
     }
 
     .back-btn {
-      background: white;
-      color: #555f6d;
-      border: 1px solid #dfe4ea;
-      box-shadow: 0 5px 15px rgba(31, 56, 85, 0.07);
+      background: #555;
+      color: white;
     }
 
-    .step-indicator {
-      margin-top: 18px;
-      color: #8a94a6;
-      font-size: 13px;
-    }
-
-    .step-indicator strong {
-      color: #1769aa;
+    button:hover {
+      opacity: 0.9;
     }
 
     @media (max-width: 600px) {
+
       body {
-        padding: 10px;
-      }
-
-      .header {
-        padding: 15px 12px;
-        border-radius: 14px;
-      }
-
-      .header-subtitle {
-        font-size: 20px;
-      }
-
-      .image-card {
-        padding: 5px;
-        border-radius: 12px;
-      }
-
-      .rules-image {
-        border-radius: 7px;
+        padding: 8px;
       }
 
       .buttons {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        margin-top: 15px;
+        margin-top: 12px;
       }
 
       button {
         width: 100%;
-        min-width: 0;
-        padding: 13px 10px;
-        font-size: 15px;
+        padding: 13px 15px;
       }
 
-      .agree-btn {
-        grid-column: 1 / -1;
-      }
     }
   </style>
 </head>
@@ -193,80 +98,50 @@
 <body>
 
   <!-- RULES PAGE 1 -->
+
   <div class="page active" id="page1">
 
-    <div class="header">
-      <div class="header-title">
-        Charity Hope Foundation - CHF
-      </div>
-
-      <div class="header-subtitle">
-        Rules & Regulations
-      </div>
-    </div>
-
-    <div class="image-card">
-      <img
-        src="rules-page-1.jpg"
-        alt="CHF Rules and Regulations - Page 1"
-        class="rules-image"
-      >
-    </div>
+    <img
+      src="rules-page-1.jpg"
+      alt="CHF Rules and Regulations - Page 1"
+      class="rules-image"
+    >
 
     <div class="buttons">
 
       <button class="back-btn" onclick="goHome()">
-        ← Back
+        Back to Home
       </button>
 
       <button class="next-btn" onclick="showPage2()">
-        Next →
+        Next
       </button>
 
-    </div>
-
-    <div class="step-indicator">
-      Page <strong>1</strong> of 2
     </div>
 
   </div>
 
 
   <!-- RULES PAGE 2 -->
+
   <div class="page" id="page2">
 
-    <div class="header">
-      <div class="header-title">
-        Charity Hope Foundation - CHF
-      </div>
-
-      <div class="header-subtitle">
-        Rules & Regulations
-      </div>
-    </div>
-
-    <div class="image-card">
-      <img
-        src="rules-page-2.jpg"
-        alt="CHF Rules and Regulations - Page 2"
-        class="rules-image"
-      >
-    </div>
+    <img
+      src="rules-page-2.jpg"
+      alt="CHF Rules and Regulations - Page 2"
+      class="rules-image"
+    >
 
     <div class="buttons">
 
       <button class="back-btn" onclick="showPage1()">
-        ← Previous
+        Previous
       </button>
 
       <button class="agree-btn" onclick="continueRegistration()">
-        Agree & Continue →
+        Agree & Continue
       </button>
 
-    </div>
-
-    <div class="step-indicator">
-      Page <strong>2</strong> of 2
     </div>
 
   </div>
@@ -275,34 +150,38 @@
   <script>
 
     function showPage2() {
+
       document.getElementById("page1").classList.remove("active");
+
       document.getElementById("page2").classList.add("active");
 
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+      window.scrollTo(0, 0);
+
     }
 
 
     function showPage1() {
+
       document.getElementById("page2").classList.remove("active");
+
       document.getElementById("page1").classList.add("active");
 
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+      window.scrollTo(0, 0);
+
     }
 
 
     function continueRegistration() {
+
       window.location.href = "registration.html";
+
     }
 
 
     function goHome() {
+
       window.location.href = "index.html";
+
     }
 
   </script>
