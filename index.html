@@ -105,6 +105,8 @@
       margin: 25px auto 30px;
     }
 
+    /* REGISTER BUTTON */
+
     .register-btn {
       display: inline-flex;
       align-items: center;
@@ -136,63 +138,164 @@
       transform: translateX(5px);
     }
 
+
     /* =====================================
-       FACEBOOK PAGE BUTTON
+       NEW FACEBOOK DESIGN
     ===================================== */
 
-    .facebook-btn {
-      display: inline-flex;
+    .facebook-section {
+      margin: 25px auto 0;
+      max-width: 390px;
+    }
+
+    .facebook-card {
+      position: relative;
+
+      display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
 
-      margin-top: 18px;
-
-      min-width: 250px;
-      padding: 13px 24px;
-
-      background: linear-gradient(135deg, #1877f2, #4267b2);
-      color: #ffffff;
+      width: 100%;
+      padding: 15px 16px;
 
       text-decoration: none;
 
-      border-radius: 13px;
+      background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f5f9ff
+      );
+
+      border: 1px solid #dce9f7;
+      border-radius: 18px;
+
+      box-shadow:
+        0 8px 25px rgba(23, 105, 170, 0.10);
+
+      overflow: hidden;
+
+      transition: all 0.35s ease;
+    }
+
+    .facebook-card::before {
+      content: "";
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      width: 5px;
+      height: 100%;
+
+      background: linear-gradient(
+        180deg,
+        #1877f2,
+        #4267b2
+      );
+    }
+
+    .facebook-card:hover {
+      transform: translateY(-4px);
+
+      border-color: #b9d4f0;
+
+      box-shadow:
+        0 15px 35px rgba(23, 105, 170, 0.17);
+    }
+
+    /* Facebook Logo */
+
+    .facebook-logo {
+      width: 48px;
+      height: 48px;
+
+      flex-shrink: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-left: 5px;
+
+      border-radius: 14px;
+
+      background: linear-gradient(
+        135deg,
+        #1877f2,
+        #4267b2
+      );
+
+      color: white;
+
+      font-size: 31px;
+      font-weight: bold;
+
+      box-shadow:
+        0 7px 16px rgba(24, 119, 242, 0.25);
+    }
+
+    /* Facebook Text */
+
+    .facebook-text {
+      flex: 1;
+      text-align: left;
+      padding-left: 14px;
+    }
+
+    .facebook-small {
+      display: block;
+
+      color: #98a2b3;
+
+      font-size: 10px;
+      font-weight: bold;
+
+      letter-spacing: 1px;
+
+      margin-bottom: 4px;
+    }
+
+    .facebook-title {
+      display: block;
+
+      color: #1769aa;
 
       font-size: 15px;
       font-weight: bold;
-      letter-spacing: 0.3px;
+    }
 
-      box-shadow:
-        0 8px 20px rgba(24, 119, 242, 0.22);
+    /* Arrow Circle */
+
+    .facebook-arrow {
+      width: 34px;
+      height: 34px;
+
+      flex-shrink: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-right: 2px;
+
+      border-radius: 50%;
+
+      background: #edf5fd;
+      color: #1769aa;
+
+      font-size: 18px;
 
       transition: all 0.3s ease;
     }
 
-    .facebook-btn:hover {
-      transform: translateY(-3px);
+    .facebook-card:hover .facebook-arrow {
+      background: #1769aa;
+      color: #ffffff;
 
-      box-shadow:
-        0 13px 28px rgba(24, 119, 242, 0.30);
+      transform: translateX(3px);
     }
 
-    .facebook-icon {
-      width: 25px;
-      height: 25px;
 
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      background: #ffffff;
-      color: #1877f2;
-
-      border-radius: 50%;
-
-      font-size: 19px;
-      font-weight: bold;
-
-      line-height: 1;
-    }
+    /* INFO */
 
     .info {
       margin-top: 28px;
@@ -216,7 +319,11 @@
       font-size: 12px;
     }
 
+
+    /* MOBILE */
+
     @media (max-width: 600px) {
+
       body {
         padding: 15px;
       }
@@ -248,11 +355,16 @@
         min-width: 0;
       }
 
-      .facebook-btn {
+      .facebook-section {
         width: 100%;
-        min-width: 0;
       }
+
+      .facebook-title {
+        font-size: 14px;
+      }
+
     }
+
   </style>
 </head>
 
@@ -261,27 +373,34 @@
   <div class="main-card">
 
     <div class="logo-box">
+
       <img
         src="https://raw.githubusercontent.com/chfofficialbd-chf/chf-member-registration/main/Logo%20CHF.jpg"
         alt="Charity Hope Foundation - CHF Logo"
       >
+
     </div>
+
 
     <div class="foundation-name">
       Charity Hope Foundation - CHF
     </div>
 
+
     <div class="tagline">
       A Hope That Will Be Lead
     </div>
+
 
     <div class="established">
       Established - 2022
     </div>
 
+
     <h1>
       Member Registration
     </h1>
+
 
     <p class="subtitle">
       Welcome to the Charity Hope Foundation (CHF) family.
@@ -289,39 +408,84 @@
       Complete your registration to become a member of our community.
     </p>
 
+
     <div class="divider"></div>
 
-    <a href="rules.html" class="register-btn">
-      <span>Register as a Member</span>
-      <span class="arrow">→</span>
-    </a>
 
-
-    <!-- FACEBOOK PAGE -->
+    <!-- REGISTER -->
 
     <a
-      href="https://www.facebook.com/share/1DaGqHX8oN/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="facebook-btn"
+      href="rules.html"
+      class="register-btn"
     >
-      <span class="facebook-icon">f</span>
-      <span>OUR FACEBOOK PAGE</span>
+
+      <span>
+        Register as a Member
+      </span>
+
+      <span class="arrow">
+        →
+      </span>
+
     </a>
+
+
+    <!-- FACEBOOK -->
+
+    <div class="facebook-section">
+
+      <a
+        href="https://www.facebook.com/share/1DaGqHX8oN/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="facebook-card"
+      >
+
+        <div class="facebook-logo">
+          f
+        </div>
+
+
+        <div class="facebook-text">
+
+          <span class="facebook-small">
+            CONNECT WITH US
+          </span>
+
+          <span class="facebook-title">
+            OUR FACEBOOK PAGE
+          </span>
+
+        </div>
+
+
+        <div class="facebook-arrow">
+          →
+        </div>
+
+      </a>
+
+    </div>
 
 
     <div class="info">
       Please review the rules and guidelines before continuing.
     </div>
 
+
     <div class="email">
       E-mail : chfofficialbd@gmail.com
     </div>
 
+
     <div class="footer">
+
       © 2026 Charity Hope Foundation - CHF
+
       <br>
+
       Together for Hope • Humanity • Community
+
     </div>
 
   </div>
