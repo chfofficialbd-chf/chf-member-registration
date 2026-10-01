@@ -15,9 +15,7 @@
       font-family: Arial, sans-serif;
     }
 
-
     body {
-
       min-height: 100vh;
 
       background:
@@ -26,7 +24,6 @@
         linear-gradient(135deg, #f7fbff, #edf3f9);
 
       padding: 25px 15px;
-
     }
 
 
@@ -199,7 +196,7 @@
 
 
     /* =========================
-       FIELD CARD
+       FIELD
     ========================= */
 
     .field {
@@ -266,7 +263,7 @@
 
 
     /* =========================
-       INPUTS
+       INPUT
     ========================= */
 
     input,
@@ -420,7 +417,7 @@
 
 
     /* =========================
-       PHOTO BOX
+       PHOTO
     ========================= */
 
     .photo-box {
@@ -447,6 +444,21 @@
 
       color: #1769aa;
 
+      font-size: 15px;
+
+    }
+
+
+    .photo-info {
+
+      margin-top: 8px;
+
+      margin-bottom: 12px;
+
+      color: #718096;
+
+      font-size: 13px;
+
     }
 
 
@@ -463,11 +475,32 @@
     }
 
 
+    .photo-error {
+
+      display: none;
+
+      margin-top: 10px;
+
+      padding: 9px 10px;
+
+      border-radius: 8px;
+
+      background: #fff0f0;
+
+      color: #d32f2f;
+
+      font-size: 13px;
+
+      font-weight: bold;
+
+    }
+
+
     /* =========================
-       SUBMIT BUTTON
+       PREVIEW BUTTON
     ========================= */
 
-    .submit-btn {
+    .preview-btn {
 
       width: 100%;
 
@@ -502,7 +535,7 @@
     }
 
 
-    .submit-btn:hover {
+    .preview-btn:hover {
 
       transform: translateY(-2px);
 
@@ -512,15 +545,240 @@
     }
 
 
-    .submit-btn:active {
+    /* =========================
+       PREVIEW PAGE
+    ========================= */
 
-      transform: translateY(0);
+    #previewPage {
+
+      display: none;
+
+    }
+
+
+    .preview-header {
+
+      text-align: center;
+
+      padding: 10px 5px 22px;
+
+    }
+
+
+    .preview-header h2 {
+
+      font-size: 25px;
+
+      color: #1769aa;
+
+      margin-bottom: 7px;
+
+    }
+
+
+    .preview-header p {
+
+      color: #64748b;
+
+      font-size: 14px;
+
+    }
+
+
+    .preview-photo-box {
+
+      text-align: center;
+
+      margin-bottom: 22px;
+
+    }
+
+
+    .preview-photo {
+
+      width: 150px;
+
+      height: 180px;
+
+      object-fit: cover;
+
+      border-radius: 12px;
+
+      border: 4px solid white;
+
+      box-shadow:
+        0 8px 25px rgba(30,70,110,0.18);
+
+      background: #f1f5f9;
+
+    }
+
+
+    .preview-section {
+
+      margin-bottom: 18px;
+
+    }
+
+
+    .preview-section-title {
+
+      font-size: 17px;
+
+      font-weight: bold;
+
+      color: #1769aa;
+
+      padding: 11px 13px;
+
+      border-left: 5px solid #1769aa;
+
+      border-radius: 9px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #eaf5ff,
+          #f6f2ff
+        );
+
+      margin-bottom: 9px;
+
+    }
+
+
+    .preview-item {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      padding: 11px 13px;
+
+      border-bottom: 1px solid #e8edf3;
+
+      font-size: 14px;
+
+    }
+
+
+    .preview-item:last-child {
+
+      border-bottom: none;
+
+    }
+
+
+    .preview-label {
+
+      color: #64748b;
+
+      font-weight: 600;
+
+      min-width: 120px;
+
+    }
+
+
+    .preview-value {
+
+      color: #263445;
+
+      font-weight: 600;
+
+      text-align: right;
+
+      word-break: break-word;
 
     }
 
 
     /* =========================
-       BACK BUTTON
+       PREVIEW ACTIONS
+    ========================= */
+
+    .preview-actions {
+
+      display: flex;
+
+      gap: 12px;
+
+      margin-top: 25px;
+
+    }
+
+
+    .edit-btn,
+    .confirm-btn {
+
+      flex: 1;
+
+      padding: 14px;
+
+      border: none;
+
+      border-radius: 11px;
+
+      font-size: 16px;
+
+      font-weight: bold;
+
+      cursor: pointer;
+
+      transition: all 0.25s ease;
+
+    }
+
+
+    .edit-btn {
+
+      background: #eef2f7;
+
+      color: #475569;
+
+      border: 1px solid #d7dee8;
+
+    }
+
+
+    .edit-btn:hover {
+
+      background: #e2e8f0;
+
+    }
+
+
+    .confirm-btn {
+
+      background:
+        linear-gradient(
+          135deg,
+          #1769aa,
+          #5145cd
+        );
+
+      color: white;
+
+      box-shadow:
+        0 8px 20px rgba(23,105,170,0.20);
+
+    }
+
+
+    .confirm-btn:hover {
+
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 12px 25px rgba(23,105,170,0.25);
+
+    }
+
+
+    /* =========================
+       BACK
     ========================= */
 
     .back-btn {
@@ -574,6 +832,7 @@
       .logo-circle {
 
         width: 70px;
+
         height: 70px;
 
       }
@@ -620,6 +879,29 @@
 
       }
 
+
+      .preview-actions {
+
+        flex-direction: column;
+
+      }
+
+
+      .preview-item {
+
+        flex-direction: column;
+
+        gap: 4px;
+
+      }
+
+
+      .preview-value {
+
+        text-align: left;
+
+      }
+
     }
 
   </style>
@@ -632,411 +914,1090 @@
   <div class="form-container">
 
 
-    <!-- HEADER -->
+    <!-- =========================
+         FORM PAGE
+    ========================= -->
 
-    <div class="header">
+    <div id="formPage">
 
 
-      <div class="logo-circle">
+      <!-- HEADER -->
+
+      <div class="header">
+
+        <div class="logo-circle">
+
+          <img
+            src="https://raw.githubusercontent.com/chfofficialbd-chf/chf-member-registration/main/Logo%20CHF.jpg"
+            alt="CHF Logo"
+            class="logo"
+          >
+
+        </div>
+
+
+        <h1>
+          CHF Member Registration
+        </h1>
+
+
+        <p>
+          Charity Hope Foundation-CHF
+        </p>
+
+
+        <div class="header-line"></div>
+
+      </div>
+
+
+      <!-- PERSONAL INFORMATION -->
+
+      <div class="section-title">
+        Personal Information
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Name <span class="required">*</span>
+        </label>
+
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your full name"
+          required>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Date of Birth <span class="required">*</span>
+        </label>
+
+        <input
+          type="date"
+          id="dob"
+          required>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Gender <span class="required">*</span>
+        </label>
+
+        <select id="gender" required>
+
+          <option value="">
+            Select Gender
+          </option>
+
+          <option value="Male">
+            Male
+          </option>
+
+          <option value="Female">
+            Female
+          </option>
+
+          <option value="Other">
+            Other
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Blood Group
+        </label>
+
+        <select id="bloodGroup">
+
+          <option value="">
+            Select Blood Group
+          </option>
+
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+
+        </select>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Address <span class="required">*</span>
+        </label>
+
+        <textarea
+          id="address"
+          placeholder="Enter your full address"
+          required></textarea>
+
+      </div>
+
+
+      <!-- CONTACT INFORMATION -->
+
+      <div class="section-title">
+        Contact Information
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Mobile Number <span class="required">*</span>
+        </label>
+
+        <input
+          type="tel"
+          id="mobile"
+          placeholder="Enter your mobile number"
+          required>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Email Address <span class="required">*</span>
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email address"
+          required>
+
+      </div>
+
+
+      <!-- MEMBERSHIP -->
+
+      <div class="section-title">
+        Membership Information
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Reference
+        </label>
+
+        <input
+          type="text"
+          id="reference"
+          placeholder="Reference person's name">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          ID Card Fee <span class="required">*</span>
+        </label>
+
+
+        <div class="fee-options">
+
+
+          <div class="fee-option">
+
+            <input
+              type="radio"
+              id="feeYes"
+              name="idFee"
+              value="Yes">
+
+            <label for="feeYes">
+              Yes
+            </label>
+
+          </div>
+
+
+          <div class="fee-option">
+
+            <input
+              type="radio"
+              id="feeNo"
+              name="idFee"
+              value="No">
+
+            <label for="feeNo">
+              No
+            </label>
+
+          </div>
+
+
+          <div class="fee-option">
+
+            <input
+              type="radio"
+              id="feeWillPay"
+              name="idFee"
+              value="Will be paid">
+
+            <label for="feeWillPay">
+              Will be paid
+            </label>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO -->
+
+      <div class="section-title">
+        Passport Size Picture
+      </div>
+
+
+      <div class="field photo-box">
+
+        <label>
+
+          Upload Passport Size Photo
+
+          <span class="required">*</span>
+
+        </label>
+
+
+        <div class="photo-info">
+
+          JPG, JPEG or PNG • File size: 1–5 MB
+
+        </div>
+
+
+        <input
+          type="file"
+          id="photo"
+          accept=".jpg,.jpeg,.png,image/jpeg,image/png"
+          required>
+
+
+        <div
+          class="photo-error"
+          id="photoError">
+        </div>
+
+      </div>
+
+
+      <!-- PREVIEW BUTTON -->
+
+      <button
+        type="button"
+        class="preview-btn"
+        id="previewBtn">
+
+        Preview Registration
+
+      </button>
+
+
+      <a
+        href="index.html"
+        class="back-btn">
+
+        ← Back to Home
+
+      </a>
+
+
+    </div>
+
+
+    <!-- =========================
+         PREVIEW PAGE
+    ========================= -->
+
+    <div id="previewPage">
+
+
+      <div class="preview-header">
+
+        <h2>
+          Registration Preview
+        </h2>
+
+        <p>
+          Please check all information before submitting.
+        </p>
+
+      </div>
+
+
+      <!-- PHOTO PREVIEW -->
+
+      <div class="preview-photo-box">
 
         <img
-          src="https://raw.githubusercontent.com/chfofficialbd-chf/chf-member-registration/main/Logo%20CHF.jpg"
-          alt="CHF Logo"
-          class="logo"
-        >
+          id="previewPhoto"
+          class="preview-photo"
+          alt="Passport Photo Preview">
 
       </div>
 
 
-      <h1>
-        CHF Member Registration
-      </h1>
+      <!-- PERSONAL PREVIEW -->
 
+      <div class="preview-section">
 
-      <p>
-        Charity Hope Foundation-CHF
-      </p>
+        <div class="preview-section-title">
+          Personal Information
+        </div>
 
 
-      <div class="header-line"></div>
+        <div class="preview-item">
 
+          <span class="preview-label">
+            Name
+          </span>
 
-    </div>
-
-
-    <!-- PERSONAL INFORMATION -->
-
-    <div class="section-title">
-      Personal Information
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        Name <span class="required">*</span>
-      </label>
-
-      <input
-        type="text"
-        name="name"
-        placeholder="Enter your full name"
-        required>
-
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        Date of Birth <span class="required">*</span>
-      </label>
-
-      <input
-        type="date"
-        name="dob"
-        required>
-
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        Gender <span class="required">*</span>
-      </label>
-
-      <select name="gender" required>
-
-        <option value="">
-          Select Gender
-        </option>
-
-        <option value="Male">
-          Male
-        </option>
-
-        <option value="Female">
-          Female
-        </option>
-
-        <option value="Other">
-          Other
-        </option>
-
-      </select>
-
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        Blood Group
-      </label>
-
-      <select name="bloodGroup">
-
-        <option value="">
-          Select Blood Group
-        </option>
-
-        <option value="A+">A+</option>
-        <option value="A-">A-</option>
-        <option value="B+">B+</option>
-        <option value="B-">B-</option>
-        <option value="AB+">AB+</option>
-        <option value="AB-">AB-</option>
-        <option value="O+">O+</option>
-        <option value="O-">O-</option>
-
-      </select>
-
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        Address <span class="required">*</span>
-      </label>
-
-      <textarea
-        name="address"
-        placeholder="Enter your full address"
-        required></textarea>
-
-    </div>
-
-
-    <!-- CONTACT INFORMATION -->
-
-    <div class="section-title">
-      Contact Information
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        Mobile Number <span class="required">*</span>
-      </label>
-
-      <input
-        type="tel"
-        name="mobile"
-        placeholder="Enter your mobile number"
-        required>
-
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        Email Address <span class="required">*</span>
-      </label>
-
-      <input
-        type="email"
-        name="email"
-        placeholder="Enter your email address"
-        required>
-
-    </div>
-
-
-    <!-- MEMBERSHIP INFORMATION -->
-
-    <div class="section-title">
-      Membership Information
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        Reference
-      </label>
-
-      <input
-        type="text"
-        name="reference"
-        placeholder="Reference person's name">
-
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        ID Card Fee <span class="required">*</span>
-      </label>
-
-
-      <div class="fee-options">
-
-
-        <div class="fee-option">
-
-          <input
-            type="radio"
-            id="feeYes"
-            name="idFee"
-            value="Yes"
-            required>
-
-          <label for="feeYes">
-            Yes
-          </label>
+          <span
+            class="preview-value"
+            id="previewName">
+          </span>
 
         </div>
 
 
-        <div class="fee-option">
+        <div class="preview-item">
 
-          <input
-            type="radio"
-            id="feeNo"
-            name="idFee"
-            value="No">
+          <span class="preview-label">
+            Date of Birth
+          </span>
 
-          <label for="feeNo">
-            No
-          </label>
+          <span
+            class="preview-value"
+            id="previewDob">
+          </span>
+
+        </div>
+
+
+        <div class="preview-item">
+
+          <span class="preview-label">
+            Gender
+          </span>
+
+          <span
+            class="preview-value"
+            id="previewGender">
+          </span>
 
         </div>
 
 
-        <div class="fee-option">
+        <div class="preview-item">
 
-          <input
-            type="radio"
-            id="feeWillPay"
-            name="idFee"
-            value="Will be paid">
+          <span class="preview-label">
+            Blood Group
+          </span>
 
-          <label for="feeWillPay">
-            Will be paid
-          </label>
+          <span
+            class="preview-value"
+            id="previewBlood">
+          </span>
 
         </div>
 
+
+        <div class="preview-item">
+
+          <span class="preview-label">
+            Address
+          </span>
+
+          <span
+            class="preview-value"
+            id="previewAddress">
+          </span>
+
+        </div>
 
       </div>
 
+
+      <!-- CONTACT PREVIEW -->
+
+      <div class="preview-section">
+
+        <div class="preview-section-title">
+          Contact Information
+        </div>
+
+
+        <div class="preview-item">
+
+          <span class="preview-label">
+            Mobile Number
+          </span>
+
+          <span
+            class="preview-value"
+            id="previewMobile">
+          </span>
+
+        </div>
+
+
+        <div class="preview-item">
+
+          <span class="preview-label">
+            Email Address
+          </span>
+
+          <span
+            class="preview-value"
+            id="previewEmail">
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- MEMBERSHIP PREVIEW -->
+
+      <div class="preview-section">
+
+        <div class="preview-section-title">
+          Membership Information
+        </div>
+
+
+        <div class="preview-item">
+
+          <span class="preview-label">
+            Reference
+          </span>
+
+          <span
+            class="preview-value"
+            id="previewReference">
+          </span>
+
+        </div>
+
+
+        <div class="preview-item">
+
+          <span class="preview-label">
+            ID Card Fee
+          </span>
+
+          <span
+            class="preview-value"
+            id="previewFee">
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- ACTION BUTTONS -->
+
+      <div class="preview-actions">
+
+        <button
+          type="button"
+          class="edit-btn"
+          id="editBtn">
+
+          ✏️ Edit Registration
+
+        </button>
+
+
+        <button
+          type="button"
+          class="confirm-btn"
+          id="confirmBtn">
+
+          ✓ Confirm & Submit
+
+        </button>
+
+      </div>
+
+
+      <a
+        href="index.html"
+        class="back-btn">
+
+        ← Back to Home
+
+      </a>
+
+
     </div>
-
-
-    <!-- PHOTO -->
-
-    <div class="section-title">
-      Passport Size Picture
-    </div>
-
-
-    <div class="field photo-box">
-
-      <label>
-
-        Upload Passport Size Picture
-
-        <span class="required">*</span>
-
-      </label>
-
-
-      <input
-        type="file"
-        name="photo"
-        accept="image/*"
-        required>
-
-    </div>
-
-
-    <!-- SUBMIT -->
-
-    <button
-      type="button"
-      class="submit-btn">
-
-      Submit Registration
-
-    </button>
-
-
-    <script>
-
-      const SCRIPT_URL =
-        "https://script.google.com/macros/s/AKfycbwoEWioiHARlhVql9tQ3svKHiDiaEVosr_Kq9_UDpUxd9z5EovCZJW0PfIxcDxtNu-2/exec";
-
-
-      document
-        .querySelector(".submit-btn")
-        .addEventListener("click", async function () {
-
-
-          const data = {
-
-            name:
-              document.querySelector(
-                'input[name="name"]'
-              ).value,
-
-
-            dob:
-              document.querySelector(
-                'input[name="dob"]'
-              ).value,
-
-
-            gender:
-              document.querySelector(
-                'select[name="gender"]'
-              ).value,
-
-
-            bloodGroup:
-              document.querySelector(
-                'select[name="bloodGroup"]'
-              ).value,
-
-
-            address:
-              document.querySelector(
-                'textarea[name="address"]'
-              ).value,
-
-
-            mobile:
-              document.querySelector(
-                'input[name="mobile"]'
-              ).value,
-
-
-            email:
-              document.querySelector(
-                'input[name="email"]'
-              ).value,
-
-
-            reference:
-              document.querySelector(
-                'input[name="reference"]'
-              ).value,
-
-
-            idFee:
-              document.querySelector(
-                'input[name="idFee"]:checked'
-              )?.value || "",
-
-
-            photo: ""
-
-          };
-
-
-          try {
-
-            await fetch(
-              SCRIPT_URL,
-              {
-                method: "POST",
-                body: JSON.stringify(data)
-              }
-            );
-
-
-            alert(
-              "Registration submitted successfully!"
-            );
-
-
-          } catch (error) {
-
-            alert(
-              "Submission failed. Please try again."
-            );
-
-          }
-
-        });
-
-    </script>
-
-
-    <a
-      href="index.html"
-      class="back-btn">
-
-      ← Back to Home
-
-    </a>
-
 
   </div>
+
+
+  <script>
+
+
+    /* =========================
+       SCRIPT URL
+    ========================= */
+
+    const SCRIPT_URL =
+      "https://script.google.com/macros/s/AKfycbwoEWioiHARlhVql9tQ3svKHiDiaEVosr_Kq9_UDpUxd9z5EovCZJW0PfIxcDxtNu-2/exec";
+
+
+    /* =========================
+       ELEMENTS
+    ========================= */
+
+    const formPage =
+      document.getElementById("formPage");
+
+    const previewPage =
+      document.getElementById("previewPage");
+
+    const previewBtn =
+      document.getElementById("previewBtn");
+
+    const editBtn =
+      document.getElementById("editBtn");
+
+    const confirmBtn =
+      document.getElementById("confirmBtn");
+
+    const photoInput =
+      document.getElementById("photo");
+
+    const photoError =
+      document.getElementById("photoError");
+
+    const previewPhoto =
+      document.getElementById("previewPhoto");
+
+
+    /* =========================
+       PHOTO VALIDATION
+    ========================= */
+
+    photoInput.addEventListener(
+      "change",
+      function () {
+
+        photoError.style.display = "none";
+
+        photoError.textContent = "";
+
+
+        if (
+          !this.files ||
+          !this.files[0]
+        ) {
+
+          return;
+
+        }
+
+
+        const file =
+          this.files[0];
+
+
+        const fileSizeMB =
+          file.size / (1024 * 1024);
+
+
+        const validType =
+          file.type === "image/jpeg" ||
+          file.type === "image/png";
+
+
+        if (!validType) {
+
+          photoError.textContent =
+            "Please upload a JPG, JPEG or PNG image.";
+
+          photoError.style.display =
+            "block";
+
+          this.value = "";
+
+          return;
+
+        }
+
+
+        if (fileSizeMB < 1) {
+
+          photoError.textContent =
+            "Photo size must be at least 1 MB.";
+
+          photoError.style.display =
+            "block";
+
+          this.value = "";
+
+          return;
+
+        }
+
+
+        if (fileSizeMB > 5) {
+
+          photoError.textContent =
+            "Photo size must not exceed 5 MB.";
+
+          photoError.style.display =
+            "block";
+
+          this.value = "";
+
+          return;
+
+        }
+
+      }
+    );
+
+
+    /* =========================
+       PREVIEW
+    ========================= */
+
+    previewBtn.addEventListener(
+      "click",
+      function () {
+
+
+        /* CHECK REQUIRED FIELDS */
+
+        const name =
+          document.getElementById("name").value.trim();
+
+
+        const dob =
+          document.getElementById("dob").value;
+
+
+        const gender =
+          document.getElementById("gender").value;
+
+
+        const address =
+          document.getElementById("address").value.trim();
+
+
+        const mobile =
+          document.getElementById("mobile").value.trim();
+
+
+        const email =
+          document.getElementById("email").value.trim();
+
+
+        const idFee =
+          document.querySelector(
+            'input[name="idFee"]:checked'
+          );
+
+
+        const photo =
+          photoInput.files[0];
+
+
+        if (!name) {
+
+          alert("Please enter your full name.");
+
+          document.getElementById("name").focus();
+
+          return;
+
+        }
+
+
+        if (!dob) {
+
+          alert("Please select your date of birth.");
+
+          document.getElementById("dob").focus();
+
+          return;
+
+        }
+
+
+        if (!gender) {
+
+          alert("Please select your gender.");
+
+          document.getElementById("gender").focus();
+
+          return;
+
+        }
+
+
+        if (!address) {
+
+          alert("Please enter your address.");
+
+          document.getElementById("address").focus();
+
+          return;
+
+        }
+
+
+        if (!mobile) {
+
+          alert("Please enter your mobile number.");
+
+          document.getElementById("mobile").focus();
+
+          return;
+
+        }
+
+
+        if (!email) {
+
+          alert("Please enter your email address.");
+
+          document.getElementById("email").focus();
+
+          return;
+
+        }
+
+
+        if (!idFee) {
+
+          alert("Please select ID Card Fee.");
+
+          return;
+
+        }
+
+
+        if (!photo) {
+
+          photoError.textContent =
+            "Please upload your passport size photo.";
+
+          photoError.style.display =
+            "block";
+
+          photoInput.focus();
+
+          return;
+
+        }
+
+
+        /* PHOTO SIZE */
+
+        const photoSizeMB =
+          photo.size / (1024 * 1024);
+
+
+        if (photoSizeMB < 1) {
+
+          photoError.textContent =
+            "Photo size must be at least 1 MB.";
+
+          photoError.style.display =
+            "block";
+
+          return;
+
+        }
+
+
+        if (photoSizeMB > 5) {
+
+          photoError.textContent =
+            "Photo size must not exceed 5 MB.";
+
+          photoError.style.display =
+            "block";
+
+          return;
+
+        }
+
+
+        /* =========================
+           PUT DATA INTO PREVIEW
+        ========================= */
+
+        document.getElementById(
+          "previewName"
+        ).textContent =
+          name;
+
+
+        document.getElementById(
+          "previewDob"
+        ).textContent =
+          dob;
+
+
+        document.getElementById(
+          "previewGender"
+        ).textContent =
+          gender;
+
+
+        document.getElementById(
+          "previewBlood"
+        ).textContent =
+          document.getElementById(
+            "bloodGroup"
+          ).value || "Not provided";
+
+
+        document.getElementById(
+          "previewAddress"
+        ).textContent =
+          address;
+
+
+        document.getElementById(
+          "previewMobile"
+        ).textContent =
+          mobile;
+
+
+        document.getElementById(
+          "previewEmail"
+        ).textContent =
+          email;
+
+
+        document.getElementById(
+          "previewReference"
+        ).textContent =
+          document.getElementById(
+            "reference"
+          ).value.trim() || "Not provided";
+
+
+        document.getElementById(
+          "previewFee"
+        ).textContent =
+          idFee.value;
+
+
+        /* PHOTO PREVIEW */
+
+        const photoURL =
+          URL.createObjectURL(photo);
+
+
+        previewPhoto.src =
+          photoURL;
+
+
+        /* SHOW PREVIEW */
+
+        formPage.style.display =
+          "none";
+
+
+        previewPage.style.display =
+          "block";
+
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      }
+    );
+
+
+    /* =========================
+       EDIT
+    ========================= */
+
+    editBtn.addEventListener(
+      "click",
+      function () {
+
+        previewPage.style.display =
+          "none";
+
+
+        formPage.style.display =
+          "block";
+
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      }
+    );
+
+
+    /* =========================
+       CONFIRM & SUBMIT
+    ========================= */
+
+    confirmBtn.addEventListener(
+      "click",
+      async function () {
+
+
+        confirmBtn.disabled =
+          true;
+
+
+        confirmBtn.textContent =
+          "Submitting...";
+
+
+        const data = {
+
+          name:
+            document.getElementById(
+              "name"
+            ).value.trim(),
+
+
+          dob:
+            document.getElementById(
+              "dob"
+            ).value,
+
+
+          gender:
+            document.getElementById(
+              "gender"
+            ).value,
+
+
+          bloodGroup:
+            document.getElementById(
+              "bloodGroup"
+            ).value,
+
+
+          address:
+            document.getElementById(
+              "address"
+            ).value.trim(),
+
+
+          mobile:
+            document.getElementById(
+              "mobile"
+            ).value.trim(),
+
+
+          email:
+            document.getElementById(
+              "email"
+            ).value.trim(),
+
+
+          reference:
+            document.getElementById(
+              "reference"
+            ).value.trim(),
+
+
+          idFee:
+            document.querySelector(
+              'input[name="idFee"]:checked'
+            )?.value || "",
+
+
+          photo: ""
+
+        };
+
+
+        try {
+
+
+          await fetch(
+            SCRIPT_URL,
+            {
+              method: "POST",
+              body: JSON.stringify(data)
+            }
+          );
+
+
+          alert(
+            "Registration submitted successfully!"
+          );
+
+
+          window.location.href =
+            "index.html";
+
+
+        }
+
+        catch (error) {
+
+
+          alert(
+            "Submission failed. Please try again."
+          );
+
+
+          confirmBtn.disabled =
+            false;
+
+
+          confirmBtn.textContent =
+            "✓ Confirm & Submit";
+
+        }
+
+      }
+    );
+
+  </script>
 
 
 </body>
